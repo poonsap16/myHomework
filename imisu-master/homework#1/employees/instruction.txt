@@ -1,0 +1,19 @@
+1. สร้าง laravel 5.5 app ตั้งชื่อว่า myHomework
+2. หน้าที่ของ app คือเรียกดูข้อมูลจากไฟล์ csv ทั้ง 2 ไฟล์
+3. กำหนดให้เข้าดูข้อมูล employees-mu-test-score ได้จาก https://hostname/employees/mu-test-score
+4. กำหนดให้เข้าดูข้อมูล employees-position ได้จาก https://hostname/employees/position
+5. ที่ไฟล์ routes/web.php ให้เขียน route ได้แค่อันเดียวเท่านั้น
+6. ให้ใช้ controller ในการจัดการ request
+7. แสดงข้อมูล 1 record ต่อ 1 div 
+    เช่น <div>พัชราภา สอบได้ mu-tet 24 คะแนน</div>
+    เช่น <div>พัชราภา เป็นเจ้าหน้าที่ฝ่ายการเงิน</div>
+8. หากเจ้าหน้าที่คนไหนได้คะแนน mu-test >= 36 ให้กำหนดพื้นหลังของ div เป็นสีเขียว หาก < 36 ให้ใช้สีแดง การจัด style แบบนี้ให้ใช้กับการแสดงข้อมูล csv ทั้ง 2 ไฟล์
+9. การแสดงผลต้องเป็นแบบ responsive 
+    หากแสดงผลบนจอกว้างมาก ให้แสดง 4 div ต่อ 1 แถว
+    หากแสดงผลบนจอ desktop ให้แสดง 3 div ต่อ 1 แถว
+    หากแสดงผลบนจอ tablet ให้แสดง 2 div ต่อ 1 แถว
+    หากแสดงผลบนจอ phone ให้แสดง 1 div ต่อ 1 แถว
+10. ให้ deploy app นี้บน heroku
+11. จะตรวจการบ้านจาก app จริงที่ heroku และตรวจ code ที่ github
+
+# แนะนำ ไม่ต้องใช้ database ไม่ต้องสร้าง migration และ model
