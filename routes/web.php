@@ -17,4 +17,4 @@ Route::get('/', function () {
 
 // Route::get('/phones/{title}','PhonesController@phonesShow');
 
-Route::get('/phones','PhonesController@phonesShow');
+Route::get('/phones/{title}','PhonesController@phonesShow');
