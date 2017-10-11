@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>phones sell</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
@@ -24,14 +27,16 @@
 </head>
 <body>
   <div class="container-fluid">
-
-          @foreach ($items as $item)
-          @if(($item['sell']) >= 19500)
-              <div class="col-sm-6 col-md-4 col-lg-3" style="background-color:red">{{ $item['name'] }} ราคา {{ $item['sell'] }} บาท</div>
-          @else
-              <div class="col-sm-6 col-md-4 col-lg-3">{{ $item['name'] }} ราคา {{ $item['sell'] }} บาท</div>
-          @endif
-
+          @foreach ($sells as $sell)
+            @foreach ($prices as $price)
+              @if($price['name']==$sell['name'])
+                @if(($price['price']) >= 19500)
+                  <div class="col-sm-6 col-md-4 col-lg-3" style="background-color: red">{{ $sell['name'] }} ราคา {{ $sell['sell'] }} บาท</div>
+                @else
+                  <div class="col-sm-6 col-md-4 col-lg-3" style="background-color: blue">{{ $sell['name'] }} ราคา {{ $sell['sell'] }} บาท</div>
+                @endif
+              @endif
+              @endforeach
           @endforeach
   </div>
 </body>

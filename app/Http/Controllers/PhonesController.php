@@ -24,8 +24,9 @@ class PhonesController extends Controller
                 break;
                 case "sell":
                 {
-                  $items = loadCSV('phones-sell');
-                  return view('sell',compact('items'));
+                      $sells = loadCSV('phones-sell');
+                      $prices = loadCSV('phones-price');
+                      return view('sell',compact('sells','prices'));
                 }
                 break;
                 default:
