@@ -15,6 +15,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Route::get('/phones/{title}','PhonesController@phonesShow');
-
 Route::get('/phones/{title}','PhonesController@phonesShow');
