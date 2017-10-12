@@ -11,6 +11,4 @@
 |
 */
 
-//Route::get('/phones/{title}','PhonesController@phonesShow');
-
 Route::get('/{resource}/{topic}', 'ItemsController@display');

@@ -32,7 +32,7 @@
           @if(($item['price']) >= 19500)
               <div class="col-sm-6 col-md-4 col-lg-3" style="background-color: red">{{ $item['name'] }} ราคา {{ $item['price'] }} บาท</div>
           @else
-              <div class="col-sm-6 col-md-4 col-lg-3">{{ $item['name'] }} ราคา {{ $item['price'] }} บาท</div>
+              <div class="col-sm-6 col-md-4 col-lg-3" style="background-color: red">{{ $item['name'] }} ราคา {{ $item['price'] }} บาท</div>
           @endif
           @endforeach
 
