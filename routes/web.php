@@ -13,4 +13,12 @@
 
 //Route::get('/phones/{title}','PhonesController@phonesShow');
 
-Route::get('/{resource}/{topic}', 'ItemsController@display');
+//Route::get('/{resource}/{topic}', 'ItemsController@display');
+
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::get('rfid-med-todolist', function () {
+    return view('rfid-med-todolist');
+});
